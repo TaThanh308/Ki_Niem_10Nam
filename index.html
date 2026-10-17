@@ -15,6 +15,6 @@ c.onpointerdown=e=>{if(!photo)return;drag=true;let p=pos(e);lx=p.x;ly=p.y;c.setP
 c.onpointermove=e=>{if(!drag||!photo)return;let p=pos(e);ox+=p.x-lx;oy+=p.y-ly;lx=p.x;ly=p.y;draw()};
 c.onpointerup=c.onpointercancel=()=>drag=false;
 document.getElementById('reset').onclick=()=>{scale=1;ox=oy=0;zoom.value=100;zv.textContent='100%';draw()};
-document.getElementById('download').onclick=()=>{if(!photo){status.textContent='Bạn hãy chọn ảnh trước.';return}let a=document.createElement('a');a.download='avatar-Phu-An-10-nam-PAN.png';a.href=c.toDataURL('image/png');a.click();status.textContent='Đã tạo ảnh PNG.'};
+document.getElementById('download').onclick=()=>{if(!photo){status.textContent='Bạn hãy chọn ảnh trước.';return}let a=document.createElement('a');a.download='avatar-Phu-An-10-nam-PAN.png';a.href=c.toDataURL('image/png');a.click();status.textContent='Đã tải ảnh xuống.'};
 draw();
 </script></body></html>
